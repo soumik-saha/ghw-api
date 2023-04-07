@@ -24,10 +24,10 @@ def hello_ghw():
 
 @app.route("/hackathons", methods=['GET','POST'])
 def getHackathons():
-    # if request.method == 'POST':
-
-    # else:
-    return hackathons
+    if request.method == 'POST':
+        hackathons["New Hackathon"] = request.json
+    else:
+        return hackathons
 
 if __name__ == "__main__":
     app.run(debug = True)
