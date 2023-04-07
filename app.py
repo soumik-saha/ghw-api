@@ -145,7 +145,7 @@ def hello_ghw():
 @app.route("/weather", methods=['GET','POST'])
 def getWeather():
     if request.method == 'POST':
-        weather["New Hackathon"] = request.json
+        weather["New City"] = request.json
         return weather
     else:
         return weather
